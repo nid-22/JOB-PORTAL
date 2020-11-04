@@ -1,0 +1,1 @@
+A basic application where an employer posts for a job requirement. The job-hunter applies to the jobs posted on the dashboard. The employer checks his profile for applications to the jobs posted by him. Login, logout using cookies
