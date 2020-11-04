@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <link rel="stylesheet" href="static/login.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>REGISTER</title>
+</head>
+
+<body>
+  <div  style="background-color: #FFFFFF;
+        width: 500px;
+        height: 600px;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);">
+    <p class="sign" align="center">Register</p>
+    <form class="form1" method="POST" action="/signup">
+      <input name="username" class="un " type="text" align="center" placeholder="Username">
+      <input name="email" class="un " type="text" align="center" placeholder="email">
+      <input name="dob" class="un " type="date" align="center" placeholder="dob">
+      <input name="location" class="un " type="text" align="center" placeholder="location">
+
+
+      <fieldset style="height: 50%;
+    width: 80%;
+    background: #ffffff;
+    text-align:center;
+    margin:auto;">
+						<legend>Gender</legend>
+				Male<input type="radio" name="gender" value="Male">
+				Female<input type="radio" name="gender" value="Female">
+      </fieldset>
+      <br>
+
+      <input name="password" class="pass" type="password" align="center" placeholder="Password">
+      <input class="submit"  type="submit" name="submit"  value="Register">
+
+    </form>
+
+
+  </div>
+
+</body>
+</html>

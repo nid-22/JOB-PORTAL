@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="static/login.css">
+
+
+<title>Dashboard</title>
+{% endblock %}
+
+{% block body %}
+      <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">DASHBOARD</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarsExample01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+              <li class="nav-item active">
+              <a class="nav-link" href="/logout">Log out <span class="sr-only">(current)</span></a>
+            </li>
+              <li class="nav-item active">
+              <a class="nav-link" href="/viewprofile" tabindex="-1" >Profile</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact us</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <a class="dropdown-item" href="#">Facebook</a>
+                <a class="dropdown-item" href="#">Instagram</a>
+                <a class="dropdown-item" href="#">Email</a>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+    </nav>
+    <hr>
+
+      <h4 style="color:green">logged in</h4>
+
+        <a style="text-decoration: underline" href="/dashboard">dashboard</a>
+
+
+           {% for job in data %}
+            <br>
+        <div  style="padding-left: 40px; padding-right: 40px; padding-bottom: 40px; padding-top: 40px;box-sizing: border-box;
+              border: 2px solid rgba(0, 0, 0, 0.02);
+              margin-right: 46px;
+              margin-left: 46px;
+              background: rgba(136, 126, 126,0.2);
+              margin-bottom: 27px;">
+            <h2>{{ job[0] }}</h2>
+            <hr>
+            <h5>company name: {{ job[1] }} posted on {{job[5]}}</h5>
+            <p style="white-space: pre-wrap;">{{ job[3] }}</p>
+            <h5>Location:{{ job[2] }}</h5>
+            <h5>Posted by:{{ job[7] }}</h5>
+            <a class="btn btn-primary" href="/apply/{{ job[6] }}">Apply</a>
+       </div>
+
+       {% endfor%}
+{% endblock %}
+
